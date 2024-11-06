@@ -5,6 +5,8 @@ Complete Installation incl. result tabs
 
 ---> u n d e r  c o n s t r u c t i o n 
 
+	+ contains gear for integers (german: Zeug für Zaaaln)
+
 ## Requirements
 	+ pandas 1.1.5
 	+ ipython 7.16.3

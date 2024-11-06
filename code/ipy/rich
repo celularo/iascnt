@@ -1,0 +1,13 @@
+
+#fancy formats
+
+load_ext rich
+
+
+#beautiful
+
+import rich
+
+
+
+rich.inspect(object)
