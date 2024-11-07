@@ -37,12 +37,13 @@ def list_2pows_d(len):
 	return Lpows
 
 # frame
-def frame_bin(n):
-	dicty = {'parts_d' : list_parts_bin_d(n),
-		'driver' : list_bin_rev(n),
-		'powers_d' : list_2pows_d(len(list_bin(n)))}
+def frame0(n):
+	dicty = {
+		'clock0' : list_bin_rev(n),
+		'clock1' : list_parts_bin_d(n),
+		'clock2' : list_2pows_d(len(list_bin(n)))}
 	df = pd.DataFrame(data = dicty)
-	df['terms_d'] = df.driver * df.powers_d
+	df['clock3'] = df.clock0 * df.clock2
 	return(df)
 
 ### d e c i m a l 
@@ -87,11 +88,12 @@ def list_10pows(len):
 	return Lpows
 
 # frame
-def frame_dec(n):
-	dicty = {'parts' : list_parts_dec(n),
-		'driver' : list_dec_rev(n),
-		'powers' : list_10pows(len(list_dec(n)))}
+def frame1(n):
+	dicty = {
+		'clock0' : list_dec_rev(n),
+		'clock1' : list_parts_dec(n),
+		'clock2' : list_10pows(len(list_dec(n)))}
 	df = pd.DataFrame(data = dicty)
-	df['terms'] = df.driver * df.powers
+	df['clock3'] = df.clock0 * df.clock2
 	return(df)
 
