@@ -5,7 +5,8 @@ import datetime as dt
 
 def collect_test_lists(frame):
 	frame = frame[frame.ct_bases>=4]
-	tab = frame.pivot_table(index = ['for_bases','val','val_num','report_dtu'], values = 'ct_bases',aggfunc = 'sum').sort_index(ascending=False)
+	tab = frame.pivot_table(index = ['for_bases','val','val_num','report_dtu'],
+				values = 'ct_bases',aggfunc = 'sum').sort_index(ascending=False)
 	print(frame.axes,'\nShape:',frame.shape)
 	return tab
 

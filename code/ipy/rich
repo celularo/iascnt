@@ -1,13 +1,5 @@
-
-#fancy formats
-
+#magic ipy
 %load_ext rich
 
-
-#beautiful
-
+#module with inspect(obj)
 import rich
-
-
-
-rich.inspect(object)

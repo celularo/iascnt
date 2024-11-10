@@ -1,12 +1,14 @@
-### b i n a r y
 
 import numpy as np
 import pandas as pd
 import math
-from format import readable 
+from format import readable
 
 
-#parts list
+
+### b i n a r y
+
+#parts
 def list_parts_bin_d(n):
 	Lparts = []
 	k=n
@@ -15,19 +17,19 @@ def list_parts_bin_d(n):
 		k=math.floor(k/2)
 	return Lparts
 
-# representation List
+# representation
 def list_bin(n):
 	Lbin = [int(x) for x in bin(n).split('b')[1]]
 	revLbin = [x for x in reversed(Lbin)]
 	return Lbin
 
-# representation List reversed 
+# representation reversed
 def list_bin_rev(n):
         Lbin = [int(x) for x in bin(n).split('b')[1]]
         revLbin = [x for x in reversed(Lbin)]
         return revLbin
 
-# powers list
+# powers
 def list_2pows_d(len):
 	Lpows = []
 	k=0
@@ -46,9 +48,9 @@ def frame0(n):
 	df['clock3'] = df.clock0 * df.clock2
 	return(df)
 
-### d e c i m a l 
+### d e c i m a l
 
-# parts list
+# parts
 def list_parts_dec(n):
 	Lparts = []
 	k=n
@@ -57,7 +59,7 @@ def list_parts_dec(n):
 		k=math.floor(k/10)
 	return Lparts
 
-# multiples list
+# multiples
 def list_multis_dec(n):
 	Lparts = []
 	k=n
@@ -66,19 +68,19 @@ def list_multis_dec(n):
 		k=math.floor(k/10)
 	return Lparts
 
-# representation List
+# representation
 def list_dec(n):
 	Ldec = [int(x) for x in str(n)]
 	revLdec = [x for x in reversed(Ldec)]
 	return Ldec
 
-# representation List reversed 
+# representation reversed
 def list_dec_rev(n):
         Ldec = [int(x) for x in str(n)]
         revLdec = [x for x in reversed(Ldec)]
         return revLdec
 
-# powers list
+# powers
 def list_10pows(len):
 	Lpows = []
 	k=0

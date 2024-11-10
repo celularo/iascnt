@@ -13,8 +13,6 @@ def tbl_plain(con,tbl_str):
 	print(frame.axes,'\nShape:',frame.shape)
 	return frame
 
-
-
 def spsp_group_con_bases(con):
 	frame = pd.read_sql_query("with CAST_tab as "+
 			"(select *, CAST(base as decimal)  base1 from spsp) "+
