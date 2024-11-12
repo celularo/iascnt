@@ -20,11 +20,11 @@ def algo0(b,iframe,m):
 	for i in range(l):
 		basis.append(b)
 		b=b*b % (m)
-	frame['worker0'] = basis*frame.clock0
-	frame['worker1'] = frame.worker0.replace(0,1)
-	mexpo_val = np.product(frame.worker1)%m
+	frame['value0'] = basis*frame.iter0
+	frame['value1'] = frame.value0.replace(0,1)
+	mexpo_val = np.product(frame.value1)%m
 	k=1
-	for i in frame.worker1:
+	for i in frame.value1:
 		k=k*i % m
 	return(	k,readable.big5(k),
 		frame.applymap(readable.big5),
@@ -44,8 +44,8 @@ def algo1(rng=int(160_00000_00000),dpth=15,b=(2,3,5,7)) :
 	e= [nquerys.algo0(b[1],nframes.frame0(int(x)-1),int(x))[0] for x in c]
 	f= [nquerys.algo0(b[2],nframes.frame0(int(x)-1),int(x))[0] for x in c]
 	g= [nquerys.algo0(b[3],nframes.frame0(int(x)-1),int(x))[0] for x in c]
-	dicty = { 'clock0' : c , 'worker0' : d, 'worker1' : e, 'worker2' : g,
-		'worker3' : g }
+	dicty = { 'iter0' : c , 'value0' : d, 'value1' : e, 'value2' : g,
+		'value3' : g }
 	df = pd.DataFrame(data= dicty)
 	return df
 
@@ -61,13 +61,13 @@ def algo2(n,stage=1,b=(2,3,5,7)):
 
 #manu modulus
 def algo3(m,nu):
-	dg = nframes.frame1(m).sort_values(by='clock2',ascending = False)
+	dg = nframes.frame1(m).sort_values(by='iter2',ascending = False)
 	w = []
-	for a in dg.clock1.tolist():
+	for a in dg.iter1.tolist():
 		w.append((math.floor(a/nu),a%nu))
-	dg['work1'] = w
-	v =  dg.clock0.tolist()[1:]
+	dg['value1'] = w
+	v =  dg.iter0.tolist()[1:]
 	fini = [0]
 	v= v + fini
-	dg['work2'] = v
+	dg['value2'] = v
 	return (dg,v)

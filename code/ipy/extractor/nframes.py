@@ -41,11 +41,11 @@ def list_2pows_d(len):
 # frame
 def frame0(n):
 	dicty = {
-		'clock0' : list_bin_rev(n),
-		'clock1' : list_parts_bin_d(n),
-		'clock2' : list_2pows_d(len(list_bin(n)))}
+		'iter0' : list_bin_rev(n),
+		'iter1' : list_parts_bin_d(n),
+		'iter2' : list_2pows_d(len(list_bin(n)))}
 	df = pd.DataFrame(data = dicty)
-	df['clock3'] = df.clock0 * df.clock2
+	df['iter3'] = df.iter0 * df.iter2
 	return(df)
 
 ### d e c i m a l
@@ -92,10 +92,10 @@ def list_10pows(len):
 # frame
 def frame1(n):
 	dicty = {
-		'clock0' : list_dec_rev(n),
-		'clock1' : list_parts_dec(n),
-		'clock2' : list_10pows(len(list_dec(n)))}
+		'iter0' : list_dec_rev(n),
+		'iter1' : list_parts_dec(n),
+		'iter2' : list_10pows(len(list_dec(n)))}
 	df = pd.DataFrame(data = dicty)
-	df['clock3'] = df.clock0 * df.clock2
+	df['iter3'] = df.iter0 * df.iter2
 	return(df)
 
