@@ -1,3 +1,4 @@
+import pandas as pn
 # 60_22483_59169
 def big5(n_int):
 	s = str(n_int)
@@ -6,6 +7,10 @@ def big5(n_int):
 		l.insert(-x, '_')
 	l = ''.join(l[1:])
 	return ('-'+l if n_int < 0 else l)
+
+# frame lambda
+def form5():
+	return(lambda x : pn.DataFrame(x).applymap(big5))
 
 # 59,169.00
 def set_us_numeric(m):

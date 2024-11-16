@@ -42,3 +42,19 @@ In the code-as-frame paradigm we expect persistant frames to come with a lifecyc
 that that can be key idea of meaningful and efficient interactive sessions.
 And here the emphasis is put on efficient. Indicating again that the reasonable view of 
 'sustained' pre-version stretches 'under the hood' for factoring integers with `iascnt`.
+
+## some keys for fast development of lazy pre-code
+### lambda functions between columns
+
+in particular instead of independent column in `for`-loops.
+
+### open index ranges
+
+in particular not thinking about how long a column is expected to get before obtaining the probabilistic results.
+
+### lazy exception handling
+
+in particular to manage the unbound list index in case it causes any errors
+(overflows, zero divisions, index errors a.s.o.)
+`iascnt` provides risk and control solely for users observation
+Just catch it and show it. And hope that core dumps remain an exception.
