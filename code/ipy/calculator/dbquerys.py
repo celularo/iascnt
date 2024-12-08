@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import datetime as dt
+import format.readable
 
 
 def collect_test_lists(frame):
@@ -19,3 +20,10 @@ def trial_max_n(primes_frame,max=2000,n=3215031751):
 	frame2=frame1.sort_values(by=['moduloval','val'])
 	print(frame2.axes,'\nShape:',frame2.shape)
 	return frame2
+
+def col_int(df,obj_axes):
+	df = df[obj_axes.isnull() == False]
+	df = df.assign(asgn001=obj_axes.loc[df.index].apply(int))
+	df = df.assign(asgn002=df.asgn001.loc[df.index].apply(format.readable.big5))
+	print(df.dtypes)
+	return df

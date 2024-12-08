@@ -1,0 +1,20 @@
+#load
+%load_ext autoreload
+%load_ext rich
+
+#magic
+autoreload 2
+
+#import
+import rich
+import math as ma
+import pandas as pd
+import extractor.connector, extractor.dbframes, extractor.nframes
+import extractor.connector, extractor.dbframes, extractor.nframes
+import format.readable, casf.base, calculator.dbquerys, calculator.nquerys
+
+#extract
+co = extractor.connector.get_db()
+(sch,tbl) = extractor.dbframes.get_schema(co)
+coi = extractor.connector.get_db_iasc()
+(schi,tbli) = extractor.dbframes.get_schema(coi)
