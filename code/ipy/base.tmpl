@@ -1,0 +1,17 @@
+#template
+def tmpl_0(n,s,v=5_00000):
+        info = ('id.tmpl', 'vers.0','dev.celularo',
+                        'from.2024-mm-dd',
+                        'cha.2024-mm-dd')
+        def f():
+                return (lambda x : x)
+        c=[]
+        #c.append((n,k,n%k))
+        for i in range(v):
+                try: c.append(f()(c[i]))
+                except(ZeroDivisionError,IndexError) as error:
+                        #fine v was sufficient
+                        info = (info,error)
+                        return(pd.DataFrame(c),info)
+                        break
+        return (pd.DataFrame(c),info)

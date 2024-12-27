@@ -1,0 +1,42 @@
+the actual programming does present /a
+
+
+1.
+the actual programming does present
+one major obstacle.
+
+2.
+in this book we are often working with
+integers of 60 or more digits
+for which we need
+to maintain total accuracy.
+
+3.
+while high precision subroutines
+can be written
+they are cumbersome.
+
+4.
+in teaching this course
+I have used rexx
+a little known but highly useful language
+developed by ibm.
+
+5.
+its a modern structured language
+that is extremely simple and ideally suited
+to integer calculations.
+
+6.
+it can be run on any
+ibm compatible machine
+from a pc up to a mainframe
+and operates with arbitrary precision.
+
+7.
+I have translated all the algorithms in this book
+into rexx programs
+and will gladly send a copy to anyone
+who requests it.
+
+(1989.factorizationandprimalitytesting.ix)
