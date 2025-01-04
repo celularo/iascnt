@@ -49,6 +49,7 @@ def algo1(rng=int(160_00000_00000),dpth=15,b=(2,3,5,7)) :
 	df = pd.DataFrame(data= dicty)
 	return df
 
+
 #spsp
 def algo2(n,stage=1,b=(2,3,5,7)):
 	k= int(0.5*(n-1))

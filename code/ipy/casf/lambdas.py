@@ -14,3 +14,12 @@ def mers_0():
                         'cha.2024-12-13')
 	return (lambda x: pow(2,x)-1,info)
 
+#divide
+def dividix_0(num,cls=60_22483_59169):
+	info = ('id.dividix', 'vers.0','dev.celularo',
+                        'from.2024-12-29',
+                        'cha.2024-12-29')
+	return(lambda x : num - (x*cls),info)
+
+
+
