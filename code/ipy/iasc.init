@@ -5,23 +5,28 @@
 #magic
 autoreload 2
 
+#evtl
+import math as ma
+
 #import
 import rich
-import math as ma
 import pandas as pd
-import extractor.connector, extractor.dbframes, extractor.nframes
-import extractor.connector, extractor.dbframes, extractor.nframes
-import format.readable, casf.base, casf.lambdas, calculator.dbquerys, calculator.nquerys
-import results.publish
+import extractor.connector, extractor.dbframes
+import format.readable
+import casf.base, casf.lambdas
+import calculator.dbquerys
+import casfdemos.instruction
 
 #extract
 co = extractor.connector.get_db()
 (sch,tbl) = extractor.dbframes.get_schema(co)
 coi = extractor.connector.get_db_iasc()
 (schi,tbli) = extractor.dbframes.get_schema(coi)
+con = extractor.connector.get_db_trial()
+(schn,tbln) = extractor.dbframes.get_schema(con)
 
+#mp
+from mpmath import mp, mpf
 
-#init
-c=[]
-df = pd.DataFrame(data=c)
-i=0
+#gc
+import gc #coll = gc.collect() garbage in edgy runs

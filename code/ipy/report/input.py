@@ -8,3 +8,6 @@ def update_spsp_top(con,report_frame):
 def update_bases_spsp_sets(con,report_frame):
         report_frame.to_sql('bases_spsp_sets',con,if_exists = 'replace')
 
+def update_trial_db(con,report_frame):
+        report_frame.to_sql('pseudo_trials',con,if_exists = 'append')
+
